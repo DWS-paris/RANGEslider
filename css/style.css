@@ -1,0 +1,77 @@
+html{
+    font-size: 62.5%;
+}
+
+ul{
+    list-style: none;
+}
+
+.slider{
+    display: inline-block;
+    position: relative;
+    height: 12rem;
+}
+
+.slider h2{
+    text-transform: capitalize;
+}
+
+.pointList{
+    margin: 0;
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pointList li{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+}
+
+.pointList li::before, .pointList li::after{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.pointList li::before, .pointList li::after{
+    content: '';
+    display: block;
+}
+
+.pointList li.active::before{
+    background-color: red;
+    transition: all .3s;
+}
+
+.pointList li::before{
+    z-index: 1;
+}
+
+.pointList li::after{
+    background-color: black;
+    z-index: 0;
+}
+
+.range{
+    position: relative;
+}
+
+.range li{
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1rem;
+    width: 100%;
+    background-color: black;
+}
+
+.range .emotionRange{
+    z-index: 1;
+    width: 0%;
+    background-color: red;
+    transition: all .3s;
+}
